@@ -1,0 +1,30 @@
+html {
+    overflow-x: hidden;
+    font-size: 16px;
+
+}
+a {
+    color: #ccc;
+    display: inline-block;
+    margin-left: 7px;
+}
+a:hover {
+    color:#386380 ;
+   
+}
+body,button{
+    font-family: Consolas, 'Courier New', monospace;
+    border: none;
+}
+* {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    overflow-x: hidden;
+}

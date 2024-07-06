@@ -1,0 +1,31 @@
+ [
+    {
+      "id": "h2_ 递归思路",
+      "topic": " 递归思路",
+      "direction": "left",
+      "expanded": false,
+      "children": [
+        {
+          "id": "h3_ 算法思想",
+          "topic": " 算法思想",
+          "direction": "left",
+          "expanded": true,
+          "children": []
+        },
+        {
+          "id": "h3_ 代码实现",
+          "topic": " 代码实现",
+          "direction": "left",
+          "expanded": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "h2_ 动态规划",
+      "topic": " 动态规划",
+      "direction": "left",
+      "expanded": true,
+      "children": []
+    }
+  ]
