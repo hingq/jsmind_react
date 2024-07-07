@@ -3,7 +3,7 @@ import { UploadModal } from ".";
 import { useEffect, useRef } from "react";
 
 // eslint-disable-next-line react/prop-types
-function Upload({ uploadCallback, uploadingCallback,clickCallBack }) {
+function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
   let modal = useRef(null);
   const uploadFile = () => {
     modal.current = new UploadModal("#upload");
@@ -19,9 +19,9 @@ function Upload({ uploadCallback, uploadingCallback,clickCallBack }) {
 
     modal.current.drop(dropFunc);
   };
-  const clickCallback=()=>{
-    clickCallBack(false)
-  }
+  const clickCallback = () => {
+    clickCallBack(false);
+  };
   useEffect(() => {
     uploadFile();
     return () => {
@@ -34,7 +34,11 @@ function Upload({ uploadCallback, uploadingCallback,clickCallBack }) {
     <>
       <div id="upload" className="modal" data-state="0" data-ready="false">
         <div className="modal__header">
-          <button className="modal__close-button" type="button" onClick={clickCallback}>
+          <button
+            className="modal__close-button"
+            type="button"
+            onClick={clickCallback}
+          >
             <svg
               className="modal__close-icon"
               viewBox="0 0 16 16"

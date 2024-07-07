@@ -8,8 +8,8 @@ export default function Nav() {
   const navigate = useNavigate();
   const toUrl = (url) => {
     if (url === "project" || url === "code") {
-      url === "project" && (window.location.href='https://github.com/hingq')
-      url === "code" && (window.location.href='https://github.com/hingq')
+      url === "project" && (window.location.href = "https://github.com/hingq");
+      url === "code" && (window.location.href = "https://github.com/hingq");
     } else {
       navigate(`/${url}`);
     }
@@ -30,7 +30,6 @@ export default function Nav() {
         next = next.nextElementSibling;
       }
       // previousElementSibling
-
       e.target.classList.add("active");
       nav.current.classList.add("fx-box_rotate");
       e.target.addEventListener("animationend", () => {

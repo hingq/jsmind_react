@@ -105,16 +105,16 @@ export class UploadModal {
   fileDisplay(name = "") {
     // update the name
     this.filename = name;
-  
+
     const fileValue = this.el?.querySelector("[data-file]");
     if (fileValue) fileValue.textContent = this.filename;
 
-    // show the 
+    // show the
     this.el?.setAttribute("data-ready", this.filename ? "true" : "false");
   }
   fileHandle(e) {
-    const  target  = e.dataTransfer?e.dataTransfer:e.target
-    const {name}=target.files[0]
+    const target = e.dataTransfer ? e.dataTransfer : e.target;
+    const { name } = target.files[0];
     return new Promise(() => {
       if (target?.files.length) {
         this.fileCallback(target.files[0]);
@@ -130,7 +130,7 @@ export class UploadModal {
     typeof fn === "function" ? (this.fileCallback = fn) : "";
   }
   fileReset() {
-    console.log('filereastt');
+    console.log("filereastt");
     const fileField = this.el?.querySelector("#file");
     if (fileField) fileField.value = null;
 
@@ -184,10 +184,10 @@ export class UploadModal {
   }
   upload(fn = null) {
     if (fn) {
-      this.upload =()=>{
-        fn()
-        this.fileReset()
-      }
+      this.upload = () => {
+        fn();
+        this.fileReset();
+      };
     } else {
       if (!this.isUploading) {
         this.isUploading = true;

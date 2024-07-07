@@ -1,11 +1,10 @@
 import { randomString } from "./randomChar";
 /**
- * 
- * @param {File} file 
- * @returns 
+ *
+ * @param {File} file
+ * @returns
  */
 export default function read(file) {
-  
   if (file) {
     return readFile(file).then((res) => {
       const context = splitString(res);
@@ -97,7 +96,7 @@ function readFile(file) {
 /**
  *
  * @param {String} str
- * @description format string 
+ * @description format string
  * @returns array
  */
 

@@ -8,7 +8,7 @@ function Feedback() {
           <div className="modal__header">Contact me</div>
           <div className="modal__body">
             <p>
-              Contact me by email or submit an issue on 
+              Contact me by email or submit an issue on
               <a href="http://github/hingq">github</a>
             </p>
             <p>email: try.ashore@gmail.com </p>

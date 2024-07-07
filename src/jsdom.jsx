@@ -59,10 +59,10 @@ export default function Jsdom() {
     setMask(false);
     setDisplay((v) => !v);
   };
-  const cancleCallback=()=>{
-    setDisplay(false)
-    setMask(false)
-  }
+  const cancleCallback = () => {
+    setDisplay(false);
+    setMask(false);
+  };
   return (
     <>
       <div className="con">
