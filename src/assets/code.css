@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: Consolas, "Courier New", monospace;
+
+}
+
+.container .search {
+  width: 73%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .search input {
+  width: 85%;
+  height: 45px;
+  font-size: 18px;
+  padding: 0 5px;
+  border-radius: 7px;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+  background-color: rgba(214, 218, 221, 0.7);
+}
+.container .search button {
+  width: 15%;
+  min-width: 100px;
+  height: 45px;
+  font-size: 18px;
+  padding: 0 10px;
+  border-radius: 7px;
+  margin-left: 10px;
+  background-color: rgb(89, 133, 177);
+  transition: all 0.3s;
+}
+.container .search button:hover {
+  cursor: pointer;
+  background-color: rgba(8, 44, 78, 0.7);
+}
+.container .list {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  width: 70vw;
+  height: auto;
+  /* max-height: 70vh; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 20px;
+  overflow: auto;
+  transition: all 0.3s;
+}
+.container .list .item {
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238,0.7);
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  width: calc(70vw / 4 - 35px);
+  height: calc(10vh);
+  max-height: 200px;
+  max-width: 210px;
+  min-height: 90px;
+  transition: all 0.3s;
+}
+.container .list .item:hover{
+  background-color: rgb(85, 125, 158);
+}
+@media screen and (max-width: 768px) {
+  .container .search {
+    width: 70vw;
+    height: 150px;
+  }
+  .container .search input {
+    width: 100px;
+    width: 70%;
+    letter-spacing: -1px;
+  }
+  .container .search button {
+    width: 30%;
+    min-width: 10px;
+  }
+  .container .list {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70vw;
+    height: 100vh;
+  }
+  .container .list .item {
+    width: calc(70vw / 2 - 35px);
+  }
+}
+@media (prefers-color-scheme: dark) {
+    .container .list{
+      background-color: rgba(27, 25, 25, 0.7);
+    }
+    .container .list .item{
+      background-color: rgba(64, 67, 74, 0.7);
+    }
+}

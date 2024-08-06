@@ -1,7 +1,7 @@
 import "../assets/upload.css";
 import { UploadModal } from ".";
 import { useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 // eslint-disable-next-line react/prop-types
 function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
   let modal = useRef(null);
@@ -30,6 +30,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const { t } = useTranslation();
   return (
     <>
       <div id="upload" className="modal" data-state="0" data-ready="false">
@@ -56,7 +57,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
                 <polyline points="15,1 1,15" />
               </g>
             </svg>
-            <span className="modal__sr">Close</span>
+            <span className="modal__sr">{t("uplod.close")}</span>
           </button>
         </div>
         <div className="modal__body">
@@ -171,10 +172,13 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
           </div>
           <div className="modal__col">
             <div className="modal__content">
-              <h2 className="modal__title">Analytical a Makedown File</h2>
+              <h2 className="modal__title">
+                {t("upload.Analytical a Makedown File")}
+              </h2>
               <p className="modal__message">
-                Select or drag a file to Analytical from your computer or
-                device.
+                {t(
+                  "upload.Select or drag a file to Analytical from your computer or device."
+                )}
               </p>
               <div className="modal__actions">
                 <button
@@ -182,7 +186,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
                   type="button"
                   data-action="file"
                 >
-                  Choose File
+                  {t("upload.Choose File")}
                 </button>
                 <input id="file" type="file" hidden />
               </div>
@@ -206,7 +210,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
                   </g>
                 </svg>
                 <div className="modal__file" data-file></div>
-                {/* remove */}
+                {/* {t("upload.remove ")} */}
                 <button
                   className="modal__close-button"
                   type="button"
@@ -229,7 +233,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
                       <polyline points="12,4 4,12" />
                     </g>
                   </svg>
-                  <span className="modal__sr">Remove</span>
+                  <span className="modal__sr">{t("upload.remove ")}</span>
                 </button>
 
                 {/* upload */}
@@ -245,9 +249,9 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
 
             {/* reault */}
             <div className="modal__content" hidden>
-              <h2 className="modal__title">Uploading…</h2>
+              <h2 className="modal__title">{t("upload.Uploading…")}</h2>
               <p className="modal__message">
-                Just give us a moment to process your file.
+                {t("upload.Just give us a moment to process your file.")}
               </p>
               <div className="modal__actions">
                 <div className="modal__progress">
@@ -266,15 +270,16 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
                   type="button"
                   data-action="cancel"
                 >
-                  Cancel
+                  {t("upload.Cancel")}
                 </button>
               </div>
             </div>
             <div className="modal__content" hidden>
               <h2 className="modal__title">Oops!</h2>
               <p className="modal__message">
-                Your file could not be uploaded due to an error. Try uploading
-                it again?
+                {t(
+                  "upload.Your file could not be uploaded due to an error. Try uploading it again?"
+                )}
               </p>
               <div className="modal__actions modal__actions--center">
                 <button
@@ -294,7 +299,7 @@ function Upload({ uploadCallback, uploadingCallback, clickCallBack }) {
               </div>
             </div>
             <div className="modal__content" hidden>
-              <h2 className="modal__title">Upload Successful!</h2>
+              <h2 className="modal__title">{t("upload.Upload Successful!")}</h2>
               <p className="modal__message">
                 Your file has been uploaded. You can copy the link to your
                 clipboard.

@@ -1,10 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import "jsmind/style/jsmind.css";
 import jsMind from "jsmind";
 import read from "./util/flieRead";
 import "./assets/dom.css";
 import Upload from "./components/upload";
+import { useTranslation } from "react-i18next";
 export default function Jsdom() {
+  const { t } = useTranslation();
+
   const style = { width: "80vw", height: "70vh" };
   const jsmindContainer = useRef(null);
   const jsmindInstance = useRef(null);
@@ -68,7 +71,7 @@ export default function Jsdom() {
       <div className="con">
         <div className="box">
           <button onClick={clickCallBack} className="btn">
-            open
+            {t("upload.open")}
           </button>
           <div className="dom" ref={dom}>
             <div className="domcontainer">

@@ -3,12 +3,19 @@ html {
   font-size: 16px;
 }
 a {
-  color: #ccc;
+  color: #43474a;
   display: inline-block;
   margin-left: 7px;
+  list-style: none;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: 0;
 }
 a:hover {
-  color: #386380;
+  color: #1a71aa;
 }
 body,
 button {
@@ -24,6 +31,65 @@ button {
 #root {
   height: 100vh;
   width: 100vw;
-  /* background-color: black; */
+  background: radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+@media (prefers-color-scheme: dark) {
+  #root a {
+    color: #f1f5f7 ;
+  }
+  #root a:hover {
+    color: #4d7c93 ;
+  }
+  #root {
+    background: radial-gradient(rgb(217, 215, 215) 3px, transparent 4px),
+      radial-gradient(rgb(255, 255, 255) 3px, transparent 4px),
+      linear-gradient(rgb(49, 56, 65) 4px, transparent 0),
+      linear-gradient(
+        45deg,
+        transparent 74px,
+        transparent 75px,
+        #a4a4a4 75px,
+        #a4a4a4 76px,
+        transparent 77px,
+        transparent 109px
+      ),
+      linear-gradient(
+        -45deg,
+        transparent 75px,
+        transparent 76px,
+        #d1b7b7 76px,
+        #a4a4a4 77px,
+        transparent 78px,
+        transparent 109px
+      ),
+      rgb(49, 56, 65) ;
+      background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+      background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
 }

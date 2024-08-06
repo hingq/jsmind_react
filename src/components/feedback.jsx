@@ -11,7 +11,9 @@ function Feedback() {
               Contact me by email or submit an issue on
               <a href="http://github/hingq">github</a>
             </p>
-            <p>email: try.ashore@gmail.com </p>
+            <a href="mailto:try.ashore@gmail.com">
+              email: try.ashore@gmail.com
+            </a>
           </div>
         </div>
       </div>
