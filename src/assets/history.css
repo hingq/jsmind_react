@@ -1,0 +1,166 @@
+.zt {
+	height: 100%;
+    width: 100vw;
+	overflow-y: auto;
+	overflow-x: hidden;
+    /* font-size: 106px; */
+}
+
+li {
+	list-style: none;
+}
+
+.forecast_list {
+	/* font-size: 0.24em; */
+}
+
+.forecast_list li {
+	display: flex;
+}
+
+.forecast_list div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	padding: 0.2em 0.1em;
+}
+
+.forecast_list li:nth-of-type(2n - 1) {
+	background-color: #F8F8F8;
+}
+
+.forecast_list li:nth-of-type(2n) {
+	background-color: #ffffff;
+}
+
+.forecast_list li div {
+	border-top: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+}
+
+.forecast_list li div:first-child {
+	border-left: 1px solid #EDEDED;
+}
+
+.forecast_list li:last-child div {
+	border-bottom: 1px solid #EDEDED;
+}
+
+img.yx {
+	width: 0.24em;
+	height: 0.24em;
+	margin-left: 4px;
+	position: relative;
+	top: 0.02em;
+}
+
+.swiper1,
+.swiper3,
+.swiper4,
+.swiper5,
+.swiper6 {
+	padding-bottom: 0.6em;
+	position: relative;
+	width: 100%;
+}
+.swiper2{
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+}
+
+.swiper2 .swiper-pagination {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9;
+	top: 0;
+	height: 4px;
+	background-color: #d2d2d2;
+	/* bottom: 0; */
+	/* position: sticky;
+		top: 0; */
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+	top: 0;
+	bottom: none;
+	border: 1px solid #EDEDED;
+	border-top: none;
+	background-color: #ffffff;
+}
+
+.my-bullet {
+	width: 0.12em;
+	height: 0.12em;
+	background: #FFFFFF;
+	border: 1px solid #5F5F5F;
+	border-radius: 50%;
+	display: block;
+	margin: 0 0.1em;
+}
+
+.my-active {
+	width: 0.46em;
+	height: 0.12em;
+	background: #2E76ED;
+	border-radius: 0.2em;
+	border: 1px solid #2E76ED;
+}
+
+.swiper2 .forecast_list div,
+.swiper3 .forecast_list div,
+.swiper5 .forecast_list div {
+	flex-direction: column;
+}
+
+.swiper2 .swiper-container-horizontal>.swiper-pagination-progressbar,
+.swiper2 .swiper-container-vertical>.swiper-pagination .my-pagination-progressbar {
+	width: 100%;
+	height: 4px;
+	left: 0;
+	top: 0;
+}
+
+.swiper2 .my-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: var(--swiper-pagination-color, var(--swiper-theme-color));
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 4px;
+	transform: scale(0);
+	transform-origin: left top;
+	background-color: #007aff;
+}
+
+/* .forecast_list li:first-child{
+	width: 100%;
+	top: 4px;
+} */
+.sw_fixed{
+	display: flex;
+	font-size: 0.24em;
+	background-color: #F8F8F8;
+	width: 100%;
+	top: 14px;
+    position: sticky;
+    font-size: 16px;
+}
+.sw_fixed div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	padding: 0.2em 0.1em;
+	border-top: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+}
+.sw_fixed div:first-child{
+	border-left: 1px solid #EDEDED;
+}

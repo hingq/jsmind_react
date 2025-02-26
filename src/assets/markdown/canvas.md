@@ -1,4 +1,4 @@
-## canvas标签
+# canvas 标签
 
 ```javascript
 width ,height 属性是可选的,当没有设置宽度和高度的时候，canvas会初始化
@@ -6,7 +6,7 @@ width：300px  height：150px
 
 ```
 
-canvas可以创造一个固定大小的画布，它公开了一个或多个渲染上下文。可以用来绘制和处理要展示的内容。
+>  canvas 可以创造一个固定大小的画布，它公开了一个或多个渲染上下文。可以用来绘制和处理要展示的内容。
 
 ```javascript
 var canvas = document.getElementById('tutorial');
@@ -31,17 +31,17 @@ getContext()方法接受一个参数，即上下文的类型。对于2d图像而
 ## 绘制矩形
 
 ```javascript
-fillRect(x,y,width,height) 
-绘制一个填充的矩形
+fillRect(x, y, width, height);
+绘制一个填充的矩形;
 
-strokeRect(x, y, width, height)
-绘制一个矩形边框
+strokeRect(x, y, width, height);
+绘制一个矩形边框;
 
-clearRect(x, y, width, height)
-清除指定矩形区域
+clearRect(x, y, width, height);
+清除指定矩形区域;
 ```
 
-上述的方法中每个都包含相同的参数，x,y指定在canvas画布上所绘制的矩形的左上角的坐标，width，height设置矩形的尺寸。
+上述的方法中每个都包含相同的参数，x,y 指定在 canvas 画布上所绘制的矩形的左上角的坐标，width，height 设置矩形的尺寸。
 
 ## 绘制路径
 
@@ -97,7 +97,7 @@ arcTo(x1,y1,x2,y2,50)
 arcTo() 方法在画布上创建介于两个切线之间的弧/曲线
 此圆弧与当前点到第一个点（x1,y1）的连线相切，而且第一个点到第二点（x2,y2）的连线也相切。
 
-ctx.strokeStyle = 
+ctx.strokeStyle =
 `rgba(${81 + 171 * Math.abs(1 - progress * 2)}, ${160 - 160 * Math.abs(1 - progress * 2)}, ${255},1)`
 
 
@@ -132,9 +132,9 @@ stroke('',x,y) //描绘文字
 ctx.font='40px sans-self '
 
 ctx.textBaseline='top/middle/bottom' , //基线
-    
+
 ctx.meaureText();//返回一个对象，包含文本信息
-    
+
 ctx.getImageData(x,y,width,height) //获取像素点，返回对象,date数组存储每个像素点的rgba() ,此处透明度0~255
 
 ctx.putImageData(imageData，x,y) //设置像素点
@@ -178,4 +178,3 @@ const canvas_ = document.querySelector('canvas')
     ctx.scale(2,2)
 https://www.cnblogs.com/nzbin/p/9447882.html
 ```
-

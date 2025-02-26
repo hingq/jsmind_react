@@ -10,7 +10,7 @@ git@github.com:wangjiax9/practice.git //关联远程仓库
 git push -u origin master //把本地库的所有内容推送到远程库上
 ```
 
-## push an existing repository from the command line
+## 向已有仓库添加
 
 ```
 git remote add origin git@github.com:hingq/C-C-.git

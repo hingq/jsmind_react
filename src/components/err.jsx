@@ -97,10 +97,12 @@ function Err() {
         <div>
           <h1>404</h1>
           <p>
-           {t( "We couldn’t find the page you were looking for. It may have been moved, or it just doesn’t exist.")}
+            {t(
+              "We couldn’t find the page you were looking for. It may have been moved, or it just doesn’t exist."
+            )}
           </p>
-          <a  className="btn-link" href="#">
-           {t(" Go Back Home")}
+          <a className="btn-link" href="/">
+            {t(" Go Back Home")}
           </a>
         </div>
       </main>

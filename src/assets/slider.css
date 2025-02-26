@@ -1,0 +1,70 @@
+
+
+.all {
+  position: relative;
+  width: 100vw;
+  height: 25vh;
+  margin-top: 21px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.all .box {
+  display: block;
+  top: 0px;
+  left: 0;
+  clear: both;
+  margin-top: 3px;
+}
+
+.all .card {
+  width: 100px;
+  height: 27px;
+  line-height: 23px;
+  position: relative;
+  left: -62px;
+  padding: 16px 32px 16px 64px;
+  /* margin: 8px; */
+  box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+  /* background: #fff; */
+  transition: all 0.3s ease-in-out 0.1s;
+  letter-spacing: 1px;
+}
+.all .card:hover {
+  position: relative;
+  left: 12px;
+  /* margin-left: -12px; */
+  box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5),
+    0 8px 8px -8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.all .card-content {
+  color: #fff;
+  font-family: "Droid Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.bg-01 {
+  background: #539770;
+}
+.bg-03 {
+  background: #4b7d74;
+}
+/* .bg-03 {
+  background: #8dc2bc;
+} */
+.bg-04 {
+  background: #edd6b4;
+}
+.bg-05 {
+  background: #be7467;
+}
+.bg-06 {
+  background: #e2ae63;
+}

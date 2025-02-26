@@ -1,14 +1,20 @@
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createHashRouter,
+  createBrowserRouter,
+} from "react-router-dom";
 import Nav from "./nav";
 import Jsdom from "./jsdom";
 import "./assets/app.css";
-import Feedback from "./components/feedback";
+import GenerPorm from "./components/genepoem";
 import Code from "./components/code";
 import Detail from "./components/detail";
 import MdTemplate from "./components/MdTemplate";
 import Err from "./components/err";
+import Login from "./components/login";
+import History from "./components/history";
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
   {
     path: "/",
     element: <Nav />,
@@ -18,8 +24,16 @@ const routes = createHashRouter([
     element: <Jsdom />,
   },
   {
-    path: "/feedback",
-    element: <Feedback />,
+    path: "/poem",
+    element: <GenerPorm />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/history",
+    element: <History />,
   },
   {
     path: "/code",

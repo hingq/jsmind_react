@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 // https://vitejs.dev/config/
-import { default as Mdresolve } from "./src/plugin/md"
+import { default as Mdresolve } from "./src/plugin/md";
 import { resolve } from "path";
 // eslint-disable-next-line no-undef
 const isDev = process.env.NODE_ENV === "development";
@@ -11,16 +11,18 @@ export default defineConfig({
   base: path,
   assetsInclude: ["**/*.md"],
   // 依据数组先后执行
-  plugins: [ Mdresolve(),react()],
+  plugins: [Mdresolve(), react()],
   build: {
     outDir: "docs",
     rollupOptions: {
       output: {
-        manualChunks(id){          
-          if(id.includes(".md")){
-            return "markdown"
-
+        manualChunks(id) {
+          if (id.includes(".md")) {
+            return "markdown";
           }
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }          
         },
       },
     },

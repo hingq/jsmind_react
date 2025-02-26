@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.9",
     "github-markdown-css": "^5.6.1",
     "highlight.js": "^11.10.0",
     "i18next": "^23.12.2",
