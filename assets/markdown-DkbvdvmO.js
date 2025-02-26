@@ -181,7 +181,7 @@ await函数 需要放在async中\r
 await会返回右侧的值，如果为Promise对象，\r
 \r
 如果是失败的Promise对象，用try catch接受。\r
-`,l=Object.freeze(Object.defineProperty({__proto__:null,default:F},Symbol.toStringTag,{value:"Module"})),n=`## canvas标签\r
+`,l=Object.freeze(Object.defineProperty({__proto__:null,default:F},Symbol.toStringTag,{value:"Module"})),n=`# canvas 标签\r
 \r
 \`\`\`javascript\r
 width ,height 属性是可选的,当没有设置宽度和高度的时候，canvas会初始化\r
@@ -189,7 +189,7 @@ width：300px  height：150px\r
 \r
 \`\`\`\r
 \r
-canvas可以创造一个固定大小的画布，它公开了一个或多个渲染上下文。可以用来绘制和处理要展示的内容。\r
+>  canvas 可以创造一个固定大小的画布，它公开了一个或多个渲染上下文。可以用来绘制和处理要展示的内容。\r
 \r
 \`\`\`javascript\r
 var canvas = document.getElementById('tutorial');\r
@@ -214,17 +214,17 @@ getContext()方法接受一个参数，即上下文的类型。对于2d图像而
 ## 绘制矩形\r
 \r
 \`\`\`javascript\r
-fillRect(x,y,width,height) \r
-绘制一个填充的矩形\r
+fillRect(x, y, width, height);\r
+绘制一个填充的矩形;\r
 \r
-strokeRect(x, y, width, height)\r
-绘制一个矩形边框\r
+strokeRect(x, y, width, height);\r
+绘制一个矩形边框;\r
 \r
-clearRect(x, y, width, height)\r
-清除指定矩形区域\r
+clearRect(x, y, width, height);\r
+清除指定矩形区域;\r
 \`\`\`\r
 \r
-上述的方法中每个都包含相同的参数，x,y指定在canvas画布上所绘制的矩形的左上角的坐标，width，height设置矩形的尺寸。\r
+上述的方法中每个都包含相同的参数，x,y 指定在 canvas 画布上所绘制的矩形的左上角的坐标，width，height 设置矩形的尺寸。\r
 \r
 ## 绘制路径\r
 \r
@@ -280,7 +280,7 @@ arcTo(x1,y1,x2,y2,50)\r
 arcTo() 方法在画布上创建介于两个切线之间的弧/曲线\r
 此圆弧与当前点到第一个点（x1,y1）的连线相切，而且第一个点到第二点（x2,y2）的连线也相切。\r
 \r
-ctx.strokeStyle = \r
+ctx.strokeStyle =\r
 \`rgba(\${81 + 171 * Math.abs(1 - progress * 2)}, \${160 - 160 * Math.abs(1 - progress * 2)}, \${255},1)\`\r
 \r
 \r
@@ -315,9 +315,9 @@ stroke('',x,y) //描绘文字\r
 ctx.font='40px sans-self '\r
 \r
 ctx.textBaseline='top/middle/bottom' , //基线\r
-    \r
+\r
 ctx.meaureText();//返回一个对象，包含文本信息\r
-    \r
+\r
 ctx.getImageData(x,y,width,height) //获取像素点，返回对象,date数组存储每个像素点的rgba() ,此处透明度0~255\r
 \r
 ctx.putImageData(imageData，x,y) //设置像素点\r
@@ -361,7 +361,6 @@ const canvas_ = document.querySelector('canvas')\r
     ctx.scale(2,2)\r
 https://www.cnblogs.com/nzbin/p/9447882.html\r
 \`\`\`\r
-\r
 `,c=Object.freeze(Object.defineProperty({__proto__:null,default:n},Symbol.toStringTag,{value:"Module"})),r=`## text-inent\r
 \r
 \`\`\`css\r
@@ -1905,20 +1904,7 @@ interface Plugin {\r
 \r
 -  用于在模块发生热更新（Hot Module Replacement，HMR）时执行自定义逻辑。HMR 是一种开发工具，允许你在不刷新整个页面的情况下替换、添加或删除模块，以加快开发过程。\r
 \r
-> 场景举例： **动态加载模块**：你可以在热更新时动态加载新的模块，以实现按需加载或懒加载的效果。`,v=Object.freeze(Object.defineProperty({__proto__:null,default:D},Symbol.toStringTag,{value:"Module"})),A=`## vitest\r
-\r
-## 常见的Vitest方法\r
-\r
-为了编写测试，我们需要利用以下常见的方法，这些方法可以从 Vitest 导入。\r
-\r
-- \`describe\`：这个函数接受一个名字和一个函数，用于将相关的测试组合在一起。当你为一个有多个测试点（如逻辑和外观）的组件编写测试时，它就会很方便。\r
-- \`test/it\`：这个函数代表被测试的实际代码块。它接受一个字符串，通常是测试案例的名称或描述（例如，渲染成功的正确样式）和另一个函数，所有的检查和测试在这里进行。\r
-- \`expect\`： 这个函数用于测试值或创建断言。它接受一个预期为实际值（字符串、数字、对象等）的参数**x**，并使用任何支持的方法对其进行评估（例如\`toEqual(y)\`，检查 x 是否与 y 相同）。\r
-\r
-作者：王大冶\r
-链接：https://juejin.cn/post/7129667747134308389\r
-来源：稀土掘金\r
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。`,_=Object.freeze(Object.defineProperty({__proto__:null,default:A},Symbol.toStringTag,{value:"Module"})),o=`## vue3在原型挂载方法\r
+> 场景举例： **动态加载模块**：你可以在热更新时动态加载新的模块，以实现按需加载或懒加载的效果。`,v=Object.freeze(Object.defineProperty({__proto__:null,default:D},Symbol.toStringTag,{value:"Module"})),A="## vitest\r\n\r\n## 常见的Vitest方法\r\n\r\n```markdown\r\n为了编写测试，我们需要利用以下常见的方法，这些方法可以从 Vitest 导入。\r\n\r\n- `describe`：这个函数接受一个名字和一个函数，用于将相关的测试组合在一起。当你为一个有多个测试点（如逻辑和外观）的组件编写测试时，它就会很方便。\r\n- `test/it`：这个函数代表被测试的实际代码块。它接受一个字符串，通常是测试案例的名称或描述（例如，渲染成功的正确样式）和另一个函数，所有的检查和测试在这里进行。\r\n- `expect`： 这个函数用于测试值或创建断言。它接受一个预期为实际值（字符串、数字、对象等）的参数**x**，并使用任何支持的方法对其进行评估（例如`toEqual(y)`，检查 x 是否与 y 相同）。\r\n```\r\n\r\n",_=Object.freeze(Object.defineProperty({__proto__:null,default:A},Symbol.toStringTag,{value:"Module"})),o=`## vue3在原型挂载方法\r
 \r
 \`\`\`javascript\r
 app.config.globalPrperties.$test=test\r
@@ -2108,7 +2094,7 @@ git@github.com:wangjiax9/practice.git //关联远程仓库\r
 git push -u origin master //把本地库的所有内容推送到远程库上\r
 \`\`\`\r
 \r
-## push an existing repository from the command line\r
+## 向已有仓库添加\r
 \r
 \`\`\`\r
 git remote add origin git@github.com:hingq/C-C-.git\r
