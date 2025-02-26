@@ -1,0 +1,18 @@
+export const code = [
+    "html",
+    "css",
+    "js",
+    "ts",
+    "vue",
+    "promise",
+    "pinia",
+    "vuex",
+    "canvas",
+    "react",
+    "nodejs",
+    "redis",
+    "nginx",
+    "git",
+    "vite",
+    "webpack",
+  ];

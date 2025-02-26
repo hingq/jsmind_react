@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "Analytical": "Analytical",
+    "Feedback": "Feedback",
+    "markdown": "markdown",
+    "Project": "Project"
+  },
+  "upload": {
+    "Close": "Close",
+    "Analytical a Makedown File": "Analytical a Makedown File",
+    "Select or drag a file to Analytical from your computer or device.": "Select or drag a file to Analytical from your computer or device.",
+    "Choose File": "Choose File",
+    "Remove": "Remove",
+    "Uploading…": "Uploading…",
+    "Just give us a moment to process your file.": "Just give us a moment to process your file.",
+    "Your file could not be uploaded due to an error. Try uploading it again?": "  Your file could not be uploaded due to an error. Try uploading it again?",
+    "Retry": "Retry",
+    "Cancel": "Cancel",
+    "Upload Successful!": "Upload Successful!",
+    "Your file has been uploaded. You can copy the link to your clipboard.": "Your file has been uploaded. You can copy the link to your clipboard.",
+    " Done ": " Done ",
+    "open": "Open"
+  },
+  " We couldn’t find the page you were looking for. It may have been moved, or it just doesn’t exist.": " We couldn’t find the page you were looking for. It may have been moved, or it just doesn’t exist.",
+  "go back home":"go back home"
+}
