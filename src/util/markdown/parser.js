@@ -202,10 +202,12 @@ class Parser {
     return match ? match[1] : null;
   }
 
+  navigate(url) {}
   parseLink(str) {
     return str.replace(
       this.link,
-      (_, text, url) => `<a href="${url}">${text}</a>`
+      (_, text, url) =>
+        `<a onclick="window.open('${url}', '_blank'); return false;">${text}</a>`
     );
   }
 }

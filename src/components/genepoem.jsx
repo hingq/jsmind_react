@@ -61,6 +61,8 @@ function GenerPoem() {
             }&poem=${poemList.join("")}`
           )
           .then((res) => {
+            console.log(Object.entries(res.data));
+            
             setScore(Object.entries(res.data));
           });
       }
@@ -272,7 +274,7 @@ function Card({ score, poem }) {
   if (poem.length === 0) {
     return <></>;
   } else {
-
+    
     return (
       <>
         <div className="body">

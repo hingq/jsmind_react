@@ -31,29 +31,7 @@ const Mdresolve = () => {
         return result.code;
       }
     },
-    // configureServer(server) {
-    //   server.middlewares.use(async (req, res, next) => {        
-    //     const matchRoute = routes.find((route) => route.routePath === req.url);
-    //     if (matchRoute) {
-    //       const mdContent = fs.readFileSync(matchRoute.filePath, "utf-8");
-    //       const htmlContent = "";
-
-    //       const component = `
-    //         import React from 'react';
-    //         export default function MarkdownPage() {
-    //           return <div className="markdown-body" dangerouslySetInnerHTML={{ __html: ${JSON.stringify(
-    //             htmlContent
-    //           )} }} />;
-    //         }
-    //       `;
-    //       const result = transformSync(component, { loader: "jsx" });
-    //       res.setHeader("Content-Type", "text/html");
-    //       res.end(result.code);
-    //     } else {
-    //       next();
-    //     }
-    //   });
-    // },
+   
   };
 };
 

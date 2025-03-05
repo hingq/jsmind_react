@@ -14,7 +14,7 @@ import Err from "./components/err";
 import Login from "./components/login";
 import History from "./components/history";
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     element: <Nav />,
