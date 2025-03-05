@@ -53,6 +53,7 @@ export default class Reader {
 
       if (parser.isBlockQuote()) {
         tempStr = line.replace(parser.blockQuote, "");
+
         nextLine = this.lines[readerIndex + 1];
         while (nextLine && new Parser(nextLine).isBlockQuote()) {
           tempStr += `<p>${nextLine.replace(
@@ -63,7 +64,7 @@ export default class Reader {
           nextLine = this.lines[readerIndex + 1];
         }
         hasParse.push({
-          Context: `<blockquote><p>${tempStr}</p></blockquote>`,
+          Context: `<blockquote ><p>${tempStr}</p></blockquote>`,
           tag: "blockquote",
         });
         readerIndex++;
@@ -131,6 +132,12 @@ export default class Reader {
         readerIndex++;
         continue;
       }
+      if (parser.isEmphasics()) {
+        tempStr = parser.parseEmphasis(line);
+        hasParse.push({ Context: tempStr, tag: "strong" });
+        readerIndex++;
+        continue;
+      }
 
       readerIndex++;
     }
@@ -158,12 +165,16 @@ class Parser {
     this.orderedList = /^(\d+\.\s+)/;
     this.codeBlock = /^(```)/;
     this.link = /\[(.*?)\]\((.*?)\)/g;
+    // 突出强调
+    this.emphasis = /\*\*(.*?)\*\*/g;
   }
 
   isEmptyLine() {
     return !this.line.trim();
   }
-
+  isEmphasics() {
+    return this.line.includes("**");
+  }
   isHead() {
     return this.heading.test(this.line);
   }
@@ -201,8 +212,9 @@ class Parser {
     const match = this.line.match(/^```(\w+)/);
     return match ? match[1] : null;
   }
-
-  navigate(url) {}
+  parseEmphasis(str) {
+    return str.replace(this.emphasis, "<strong>$1</strong>");
+  }
   parseLink(str) {
     return str.replace(
       this.link,

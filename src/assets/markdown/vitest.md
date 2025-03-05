@@ -1,6 +1,6 @@
 ## vitest
 
-## 常见的Vitest方法
+## 常见的 Vitest 方法
 
 ```markdown
 为了编写测试，我们需要利用以下常见的方法，这些方法可以从 Vitest 导入。
@@ -10,3 +10,7 @@
 - `expect`： 这个函数用于测试值或创建断言。它接受一个预期为实际值（字符串、数字、对象等）的参数**x**，并使用任何支持的方法对其进行评估（例如`toEqual(y)`，检查 x 是否与 y 相同）。
 ```
 
+> 1. 标签页静态路经
+> 2. css 静态路径
+> 3. 动态导入，import.meta.url
+> 4. URL api, new URL('path',import.meta.url

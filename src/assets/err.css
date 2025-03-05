@@ -31,7 +31,7 @@ h1 {
 }
 p {
   margin: 0 0 1.5em;
-  color: #fff;
+  color: #0b0b0b;
   font-size: 18px;
 }
 .btn-link {
@@ -122,6 +122,9 @@ p {
   }
   .paper__shadow:first-child {
     fill: hsl(var(--hue), 10%, 15%);
+  }
+  p{
+    color: #fff;
   }
 }
 
