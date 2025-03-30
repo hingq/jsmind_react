@@ -33,7 +33,7 @@ function GenerPoem() {
 
   const navigator = useNavigate();
   const [score, setScore] = useState(0);
-
+  const [placeholder, setPlaceholder] = useState("请输入主题词");
   const getPoem = async () => {
     try {
       request.key = input.current.value;
@@ -62,7 +62,7 @@ function GenerPoem() {
           )
           .then((res) => {
             console.log(Object.entries(res.data));
-            
+
             setScore(Object.entries(res.data));
           });
       }
@@ -80,36 +80,37 @@ function GenerPoem() {
       search.current.classList.remove("loading");
     }, 1500);
   }
-  useEffect(() => {
-    if (!token) {
-      navigator("/login");
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (!token) {
+  //     navigator("/login");
+  //   }
+  // }, [token]);
   useEffect(() => {}, []);
   return (
     <>
       <div className="searchContainer">
         <Slider></Slider>
-        <Nav></Nav>
+        <div id="search" ref={search}>
+          <input
+            id="input"
+            placeholder={placeholder}
+            ref={input}
+            type="text"
+            autoComplete="off"
+            onKeyDown={(e) => {
+              if (e.key == "Enter") loading();
+            }}
+          />
+          <button id="button" onClick={loading}>
+            <i className="fa fa-search"></i>
+          </button>
+          <div className="spinner">
+            <i className="fa fa-spinner"></i>
+          </div>
+        </div>
+        <Nav placeholder={setPlaceholder}></Nav>
 
         <div className="bodyContainer">
-          <div id="search" ref={search}>
-            <input
-              id="input"
-              placeholder="Stand on the shouder of giants"
-              ref={input}
-              onKeyDown={(e) => {
-                if (e.key == "Enter") loading();
-              }}
-            />
-            <button id="button" onClick={loading}>
-              <i className="fa fa-search"></i>
-            </button>
-            <div className="spinner">
-              <i className="fa fa-spinner"></i>
-            </div>
-          </div>
-          <div className="note">Click the button or hit enter.</div>
           <div className="result">
             <Card poem={poemList} score={score}></Card>
           </div>
@@ -119,7 +120,7 @@ function GenerPoem() {
   );
 }
 
-function Nav() {
+function Nav({ placeholder }) {
   function animation() {
     const navElement = document.querySelector("nav");
 
@@ -235,6 +236,11 @@ function Nav() {
   }, []);
   const clickFunction = (e) => {
     const model = e.target.getAttribute("model");
+    if (model == "010" || model == "100") {
+      placeholder("请输入藏头词");
+    } else {
+      placeholder("请输入主题词");
+    }
     request.type = model;
   };
   return (
@@ -274,7 +280,14 @@ function Card({ score, poem }) {
   if (poem.length === 0) {
     return <></>;
   } else {
-    
+    if (poem.length === 1) {
+      poem = poem[0].split("。");
+      poem = poem.map((item) => {
+        return [...item.split("，")];
+      });
+      poem = poem.flat();
+    }
+
     return (
       <>
         <div className="body">

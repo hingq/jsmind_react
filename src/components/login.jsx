@@ -93,13 +93,13 @@ function Login() {
       username: user.current.value,
       password: password.current.value,
     };
+    console.log(user.current.value);
 
     axios.post("http://127.0.0.1:5000/login", request).then((res) => {
-      
       dispatch(addToken(res.data));
       setTimeout(() => {
         route("/poem");
-      },100)
+      }, 100);
     });
   };
   return (
@@ -129,6 +129,7 @@ function Login() {
                 type="text"
                 class="styled_input_input"
                 name="nickname"
+                autoComplete="off"
                 ref={user}
               />
               <div class="styled_input_placeholder">
@@ -145,15 +146,15 @@ function Login() {
             </div>
             <button type="button" class="styled_button" onClick={btnFunction}>
               <span class="styled_button_real_text_holder">
-                <span class="styled_button_real_text">Submit</span>
+                <span class="styled_button_real_text">登录</span>
                 <span class="styled_button_moving_block face">
                   <span class="styled_button_text_holder">
-                    <span class="styled_button_text">Submit</span>
-                  </span>{" "}
+                    <span class="styled_button_text">登录</span>
+                  </span>
                 </span>
                 <span class="styled_button_moving_block back">
                   <span class="styled_button_text_holder">
-                    <span class="styled_button_text">Submit</span>
+                    <span class="styled_button_text">登录</span>
                   </span>
                 </span>
               </span>

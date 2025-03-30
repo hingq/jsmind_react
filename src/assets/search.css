@@ -36,7 +36,11 @@
   padding: 0.5em 0.5em 0.5em 1em;
   transition: all 0.5s;
   width: 550px;
+  color: aliceblue;
+  /* font-size: 14px; */
+  /* font-weight: 400; */
 }
+
 #search:hover,
 #search:focus {
   background: #27526d;
@@ -57,23 +61,25 @@
   padding: 0 0.25em;
 }
 #search input {
-  font-size: 25px;
+  font-size: 16px;
   flex: 1;
 }
 #search input::-moz-placeholder {
-  color: #fff;
+  color: #ccc;
 }
 #search input:-ms-input-placeholder {
-  color: #fff;
+  color: #ccc;
 }
 #search input::placeholder {
-  color: #fff;
+  color: #ccc;
 }
 #search .spinner {
+  width: 45px;
+  height: 45px;
   -webkit-animation: spinner 1s infinite linear;
   animation: spinner 1s infinite linear;
   display: none;
-  padding: 0 0.25em;
+  /* padding: 0 0.25em; */
 }
 
 #search.loading button {
@@ -236,7 +242,7 @@ html {
   width: calc(100% - 3em);
   min-width: 15em;
   max-width: 34.5em;
- 
+
   overflow: hidden;
   position: relative;
   transition: background-color var(--trans-dur), color var(--trans-dur);
@@ -255,7 +261,7 @@ html {
   align-items: center;
   flex-direction: row;
 }
-.modal .modal__body .poemContainer{
+.modal .modal__body .poemContainer {
   width: 100%;
   height: 100%;
   margin-right: 19px;
@@ -265,13 +271,13 @@ html {
   overflow: hidden;
   /* padding-top: 10px; */
 }
-.modal .modal__body .poemContainer p{
+.modal .modal__body .poemContainer p {
   margin-top: 19px;
 }
-.modal .modal__body .score{
+.modal .modal__body .score {
   padding-top: 10px;
 }
-.scoreContainer{
+.scoreContainer {
   margin-left: 7px;
   padding: 0;
 }
