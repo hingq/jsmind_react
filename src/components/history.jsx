@@ -31,12 +31,12 @@ function History() {
 
   const columns = [
     {
-      Header: "主题", // ✅ Fixed from "headers" to "Header"
-      accessor: "id",
+      Header: "mode", // ✅ Fixed from "headers" to "Header"
+      accessor: "mode",
     },
     {
       Header: "诗歌", // ✅ Fixed from "headers" to "Header"
-      accessor: "name",
+      accessor: "history",
     },
     {
       Header: "创建时间", // ✅ Fixed from "headers" to "Header"

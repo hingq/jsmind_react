@@ -253,12 +253,12 @@ function Nav({ placeholder }) {
         </li>
         <li>
           <button model="010" onClick={clickFunction}>
-            五言绝句
+            五言藏头
           </button>
         </li>
         <li>
           <button model="100" onClick={clickFunction}>
-            七言绝句
+            七言藏头
           </button>
         </li>
         <li>
@@ -358,13 +358,6 @@ function Slider() {
           <Link to={"/history"}>
             <div className="card bg-04">
               <span className="card-content">历史记录</span>
-            </div>
-          </Link>
-        </div>
-        <div className="box">
-          <Link to={"/generpoem"}>
-            <div className="card bg-05">
-              <span className="card-content"> 诗歌生成</span>
             </div>
           </Link>
         </div>
